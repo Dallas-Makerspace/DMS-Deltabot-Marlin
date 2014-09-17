@@ -1,0 +1,28 @@
+HOMED:
+SENDING:M114
+X:0.00 Y:0.00 Z:214.00 E:0.00 Count X: 377.54 Y:377.54 Z:377.54
+
+LOWEST:
+M114
+X:0.00 Y:0.00 Z:0.00 E:0.00 Count X: 163.58 Y:163.58 Z:163.58
+
+In Marlin first 3 numbers is the position for the planner. The other positions are the positions from the stepper function. This helps for debugging a previous stepper function bug.
+
+
+M115: Get Firmware Version and Capabilities
+Should set the URL and version to the correct URL of the DMS-Deltabot GitHub repo
+
+M119: Get Endstop Status
+
+
+M503: Print the current settings (from memory not from eeprom)
+
+
+Handy info:
+http://minow.blogspot.com/
+
+The only firmware tweaks that are important are steps per mm (which controls general X and Y movement, and Z height), DELTA_RADIUS (which controls "flatness" ) and DELTA_DIAGONAL_ROD (which controls X and Y dimensional accuracy).  Set and tune these values in this order.  
+
+Resistance of thermistors:
+Bed: 102.5 kohm
+Extruder: 102 kohm

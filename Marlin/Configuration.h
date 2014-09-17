@@ -106,7 +106,7 @@
 #define DELTA_SEGMENTS_PER_SECOND 160
 
 // Center-to-center distance of the holes in the diagonal push rods.
-#define DELTA_DIAGONAL_ROD  243 // mm [modified by Evan L. Original: 186.0]
+#define DELTA_DIAGONAL_ROD 243.0 // mm [modified by Evan L. Original: 186]
 
 // Horizontal offset from middle of printer to smooth rod center.
 #define DELTA_SMOOTH_ROD_OFFSET 128.0 // mm
@@ -146,14 +146,14 @@
 // -2 is thermocouple with MAX6675 (only for sensor 0)
 // -1 is thermocouple with AD595
 // 0 is not used
-// 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup)
-// 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup)
-// 3 is Mendel-parts thermistor (4.7k pullup)
+// 1 is 100k thermistor - best choice for EPCOS 100k (4.7k pullup) FAILED
+// 2 is 200k thermistor - ATC Semitec 204GT-2 (4.7k pullup) FAILED
+// 3 is Mendel-parts thermistor (4.7k pullup)FAILED
 // 4 is 10k thermistor !! do not use it for a hotend. It gives bad resolution at high temp. !!
-// 5 is 100K thermistor - ATC Semitec 104GT-2 (Used in ParCan & J-Head) (4.7k pullup)
-// 6 is 100k EPCOS - Not as accurate as table 1 (created using a fluke thermocouple) (4.7k pullup)
-// 7 is 100k Honeywell thermistor 135-104LAG-J01 (4.7k pullup)
-// 71 is 100k Honeywell thermistor 135-104LAF-J01 (4.7k pullup)
+// 5 is 100K thermistor - ATC Semitec 104GT-2 (Used in ParCan & J-Head) (4.7k pullup) FAILED
+// 6 is 100k EPCOS - Not as accurate as table 1 (created using a fluke thermocouple) (4.7k pullup) FAILED
+// 7 is 100k Honeywell thermistor 135-104LAG-J01 (4.7k pullup) FAILED
+// 71 is 100k Honeywell thermistor 135-104LAF-J01 (4.7k pullup)FAILED
 // 8 is 100k 0603 SMD Vishay NTCS0603E3104FXT (4.7k pullup)
 // 9 is 100k GE Sensing AL03006-58.2K-97-G1 (4.7k pullup)
 // 10 is 100k RS thermistor 198-961 (4.7k pullup)
@@ -171,10 +171,10 @@
 // 147 is Pt100 with 4k7 pullup
 // 110 is Pt100 with 1k pullup (non standard)
 
-#define TEMP_SENSOR_0 5
+#define TEMP_SENSOR_0 1
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
-#define TEMP_SENSOR_BED 0
+#define TEMP_SENSOR_BED 55
 
 // This makes temp sensor 1 a redundant sensor for sensor 0. If the temperatures difference between these sensors is to high the print will be aborted.
 //#define TEMP_SENSOR_1_AS_REDUNDANT
