@@ -6,6 +6,16 @@ LOWEST:
 M114
 X:0.00 Y:0.00 Z:0.00 E:0.00 Count X: 163.58 Y:163.58 Z:163.58
 
+After definition of MANUAL_Z_HOME_POS
+HOMED:
+SENDING:M114
+X:0.00 Y:0.00 Z:291.00 E:0.00 Count X: 517.27 Y:517.27 Z:517.27
+
+LOWEST:
+SENDING:M114
+X:0.00 Y:0.00 Z:44.20 E:0.00 Count X: 270.47 Y:270.47 Z:270.47
+
+
 In Marlin first 3 numbers is the position for the planner. The other positions are the positions from the stepper function. This helps for debugging a previous stepper function bug.
 
 
@@ -23,6 +33,13 @@ http://minow.blogspot.com/
 
 The only firmware tweaks that are important are steps per mm (which controls general X and Y movement, and Z height), DELTA_RADIUS (which controls "flatness" ) and DELTA_DIAGONAL_ROD (which controls X and Y dimensional accuracy).  Set and tune these values in this order.  
 
+- Our RAMPS is configured for 1/16 micro stepping (all jumpers installed under drivers)
+- XYZ motor labels read "LIN Engineering 4118m-02-07R0 1.0A 7-25-08"
+
 Resistance of thermistors:
 Bed: 102.5 kohm
 Extruder: 102 kohm
+
+
+Belts need to be tensioned
+We definitely need lock washers and/or nyloc nuts on motor mounts to maintain tension.
